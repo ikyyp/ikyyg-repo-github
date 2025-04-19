@@ -1,0 +1,132 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1c1c1c, #333);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  animation: fadeIn 1.2s ease-in;
+  position: relative;
+  overflow: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,69,0,0.1) 0%, rgba(255,0,0,0.05) 100%);
+  animation: fireAnim 4s infinite alternate;
+  z-index: -1;
+}
+
+@keyframes fireAnim {
+  0% {
+    background-position: 0 0;
+    filter: hue-rotate(0deg) blur(1px);
+  }
+  100% {
+    background-position: 100% 100%;
+    filter: hue-rotate(20deg) blur(2px);
+  }
+}
+
+.container {
+  max-width: 600px;
+  background-color: #222;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
+  text-align: center;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #00cec9;
+}
+
+.desc {
+  margin-top: -10px;
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #b2bec3;
+}
+
+.highlight {
+  background: linear-gradient(90deg, #ff7675, #fd79a8);
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #fff;
+  margin: 15px 0;
+  box-shadow: 0 0 15px rgba(255, 118, 117, 0.4);
+}
+
+.section {
+  margin: 20px 0;
+  text-align: left;
+}
+
+.section h2 {
+  color: #81ecec;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+a {
+  color: #00cec9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #00b894;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-top: 25px;
+}
+
+button:hover {
+  background-color: #019875;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #636e72;
+}
+
+.profil {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 20px 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+audio {
+  margin-top: 10px;
+  width: 100%;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
